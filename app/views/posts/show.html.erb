@@ -7,6 +7,11 @@
 <% @post.comments.each do |comment| %>
   <%= comment.user.username %> says: <%= comment.content %>
 <% end %>
+<ul>
+<% @post.users.uniq.each do |user| %>
+  <li><%= link_to user.username, user_path(user) %></li>
+<% end %>
+</ul>
 
 <h3>Add a Comment</h3>
 <%= form_for @post.comments.build do |f| %>
