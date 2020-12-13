@@ -11,5 +11,9 @@ class Post < ActiveRecord::Base
     end
   end
 
+  def categories_attributes
+    categories_attributes ? categories_attributes : nil
+  end
+
 
 end
