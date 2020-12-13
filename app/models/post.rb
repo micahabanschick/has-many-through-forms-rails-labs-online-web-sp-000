@@ -9,7 +9,7 @@ class Post < ActiveRecord::Base
     #   category_attribute ? category = Category.find_or_create_by(category_attribute) : nil
     #   self.categories << category
     # end
-    self.categories.build(category_attribute)
+    self.categories.build(category_attributes)
   end
 
   def categories_attributes
