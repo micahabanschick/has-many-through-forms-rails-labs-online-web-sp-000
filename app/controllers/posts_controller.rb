@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   def create
     if post_params[:categories_attributes][:name].empty?
       post_params = post_params.remove(categories_attributes)
-    end 
+    end
     post = Post.create(post_params)
     redirect_to post
   end
